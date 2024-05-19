@@ -7,52 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <div id="caption"></div>
-    </div>
-    <div id="div1">
-        <div id="div2"></div>
-    </div>
-    <script>
-        // Функція для відкриття модального вікна з зображенням
-        function openModal(imageSrc, captionText) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("modalImg");
-            var caption = document.getElementById("caption");
-
-            modal.style.display = "block";
-            modalImg.src = imageSrc;
-            caption.innerHTML = captionText;
-        }
-
-        // Функція для закриття модального вікна
-        function closeModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-
-        // Отримуємо всі елементи з класом "gallery-item" (фотографії) та додаємо до них обробник події для відкриття модального вікна
-        var galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach(function(item) {
-            item.addEventListener('click', function() {
-                var imageSrc = this.querySelector('img').src;
-                var captionText = this.querySelector('.caption').textContent;
-                openModal(imageSrc, captionText);
-            });
-        });
-
-        // Додаємо обробник події для кнопки закриття модального вікна
-        var closeBtn = document.querySelector('.close');
-        closeBtn.addEventListener('click', closeModal);
-    </script>
-</body>
-</html>
     <header class="navbar">
         <div class="navbar-container">
             <a href="#" class="logo">
-            <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\Untitled (1)\image 11.png" alt="My Site Logo" class="logo-image">
+                <img src="images/logo.png" alt="My Site Logo" class="logo-image">
             </a>
             <nav class="nav-links">
                 <a href="#home">Роботи Богдана</a>
@@ -62,27 +20,35 @@
             </nav>
         </div>
     </header>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
     
     <div id="home" class="container">
         <h1 class="animated-title">Проєкт благоустрою території Галичу</h1>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 9.jpg" alt="Фото 1">
+                <img src="images/image1.jpg" alt="Фото 1">
                 <div class="caption">Варіант 1</div>
             </div>         
             <div class="gallery-item">
-                <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 6.jpg" alt="Фото 2">
+                <img src="images/image2.jpg" alt="Фото 2">
                 <div class="caption">Варіант 2</div>
             </div>
             <div class="gallery-item">
-                <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 5.jpg" alt="Фото 3">
+                <img src="images/image3.jpg" alt="Фото 3">
                 <div class="caption">Варіант 3</div>
             </div>
             <div class="gallery-item">
-                <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 2.jpg" alt="Фото 4">
+                <img src="images/image4.jpg" alt="Фото 4">
                 <div class="caption">Варіант 4</div>
             </div>
+        </div>
     </div>
+
     <div id="about" class="container">
         <h2>Фото аналізи</h2>
         <p>Галич — місто з багатою історією та культурним спадком, і покращення його інфраструктури відіграє ключову роль у збереженні та відродженні його унікального характеру. Відповідно, розширення зон відпочинку, створення парків, але і додаткових просторів для розваг та культурних заходів, може відображати багатовікову спадщину міста і створити місце для зустрічей, відпочинку та творчості для всіх, хто цінує цю культурну спадщину.</p>
@@ -91,8 +57,8 @@
     <div id="services" class="container">
         <h2>Креслення</h2>
         <p>Тут ви можете описати ваші креслення.</p>
-        <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 3.png" alt="Креслення 1" class="section-photo">
-        <img src="s:\Проект Губаль Офіс\Проект до Галичу Стежки та інше\Фотки до Галичу\image 4.png" alt="Креслення 2" class="section-photo">
+        <img src="images/image5.jpg" alt="Креслення 1" class="section-photo">
+        <img src="images/image6.jpg" alt="Креслення 2" class="section-photo">
     </div>
 
     <div id="contact" class="container">
@@ -104,15 +70,9 @@
         <p>Інші варіанти Галичу в процесі</p>
         <p>Проект в процесі</p>
     </div>
-</div>
-    <!-- Модальне вікно -->
-<div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-    <div id="caption"></div>
-</div>
 
-    </div>
+    <!-- JavaScript код -->
     <script src="script.js"></script>
 </body>
 </html>
+
